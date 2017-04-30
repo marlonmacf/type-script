@@ -80,6 +80,6 @@ Transpiling and watch the typescript files:
 tsc --watch
 
 Run the express typescript app:
-node build/server.js
+nodemon
 
 =======================================================================================================================
