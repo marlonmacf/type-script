@@ -1,3 +1,4 @@
 .idea/
 /Implementation/express-ts/node_modules/
+/Implementation/express-ts/typings/
 /Implementation/express-ts/build/
