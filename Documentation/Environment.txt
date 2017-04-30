@@ -1,9 +1,7 @@
 ENVIRONMENT
 
-Typings is the simple way to manage and install TypeScript definitions.
-To get our TypeScript environment configured for our application, install the typescript compiler and typings:
+To get our TypeScript environment configured for our application, install the typescript compiler:
 sudo npm install typescript --save
-sudo npm install typings --save
 
 Makes a new directory:
 mkdir express-ts
@@ -27,20 +25,27 @@ parameter in the tsconfig.json:
   ]
 }
 
-Run the following to create a typings.json file:
-typings init
-
-As we will be using Express and ES2015 syntax we need to install the "es6-shim", "node", and "express" typings:
-typings install dt~node --save --global
-typings install dt~es6-shim --save --global
-typings install dt~express --save --global
-typings install dt~serve-static --save --global
-typings install dt~express-serve-static-core --save --global
-typings install dt~mime --save --global
-
 Now we can install the application dependencies via NPM:
 npm init -y
 npm install --save express
+
+As we will be using Express and ES2015 syntax we need to install the "es6-shim", "node", and "express" types:
+npm install --save @types/node
+npm install --save @types/es6-shim
+npm install --save @types/express
+
+package.json
+{
+  "name": "express-ts",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@types/es6-shim": "^0.31.33",
+    "@types/express": "^4.0.35",
+    "@types/node": "^7.0.14",
+    "express": "^4.15.2"
+  }
+}
 
 Finally let's create the application files:
 .
@@ -49,19 +54,18 @@ Finally let's create the application files:
 │   │   ├── index.ts
 │   │   └── welcomeController.ts
 │   └── server.ts
+├── build
 ├── node_modules
-├── typings
 ├── package.json
 ├── tsconfig.json
-└── typings.json
 
 Create a express app, by writing the welcomeController.ts, index.ts and server.ts files.
 Now that we have finished writing the application, let's transpile it to javascript:
 
 tsc
 
-Alternatively you may run the following to tell the Typescript compiler
-to run every time it detects a filesystem change:
+Alternatively you may run the following to tell the Typescript compiler to run every time it
+detects a filesystem changes:
 
 tsc --watch
 
@@ -69,12 +73,22 @@ We can now run the app with the following command:
 
 node build/server.js
 
+Or using the nodemon starter, by configuring our package.json:
+
+"scripts": {
+  "start": "node ./build/server.js"
+}
+
+We can now run the app with the following command:
+
+nodemon
+
 =======================================================================================================================
 
 BOOTSTRAPING THE APPLICATION
 
 Install the application dependencies and typescript syntax:
-npm install && typings install
+npm install
 
 Transpiling and watch the typescript files:
 tsc --watch
