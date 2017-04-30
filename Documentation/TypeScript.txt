@@ -53,5 +53,16 @@ INSIGHTS
 # It's not just type checking.
 # Angular team even supports TypeScript.
 # Babel is a compiler, TS is a language with a compiler.
+# ECMAScript 6 (ES6) with strong typing.
+
+=======================================================================================================================
+
+ENVIRONMENT
+
+To get our TypeScript environment configured for our application, install the typescript compiler and typings.
+Typings is the simple way to manage and install TypeScript definitions.
+
+npm install typescript --save
+npm install typings --save
 
 =======================================================================================================================
