@@ -38,7 +38,7 @@ typings install dt~serve-static --save --global
 typings install dt~express-serve-static-core --save --global
 typings install dt~mime --save --global
 
-Now we can install the application depencies via NPM:
+Now we can install the application dependencies via NPM:
 npm init -y
 npm install --save express
 
@@ -61,12 +61,25 @@ Now that we have finished writing the application, let's transpile it to javascr
 tsc
 
 Alternatively you may run the following to tell the Typescript compiler
-to run everytime it detects a filesystem change:
+to run every time it detects a filesystem change:
 
 tsc --watch
 
 We can now run the app with the following command:
 
+node build/server.js
+
+=======================================================================================================================
+
+BOOTSTRAPING THE APPLICATION
+
+Install the application dependencies and typescript syntax:
+npm install && typings install
+
+Transpiling and watch the typescript files:
+tsc --watch
+
+Run the express typescript app:
 node build/server.js
 
 =======================================================================================================================
