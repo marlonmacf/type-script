@@ -1,0 +1,57 @@
+TYPESCRIPT
+
+TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+I believe that TypeScript has been a good choice for building web applications with strong typing.
+Strong typing doesn't necessarily improve the javascript that your server/browser will execute.
+However, it provides the developer more insight into public and 3rd party APIs as well as reducing the bugs in the
+software we are developing.
+
+COMPILATION
+
+May be a disadvantage the need of compiling the application on each change, but there is some great things about it
+like you'll detect basic errors in your code earlier than having to run into it in the application itself.
+
+JAVASCRIPT MISTAKES
+
+For some developers JavaScript made some mistakes in it's development. Its is prototype language, which is not sure
+about it's origin, hence it use classical syntax, and it's confusing for new developers.
+Also it has love to Global variables.
+
+WORTH LEARNING?
+
+My opinion yes, but only if you'll use Angular 2 and above or if you can mixes with the JavaScript of other frameworks.
+It can be really helpful to detect errors early and not only during runtime.
+It's used to improve your code quality with OOP features and static typing, the beck-end guys will like.
+This transfers well into large-scale projects passing code between multiple team members.
+Looks like it's not so difficult to implement in a workflow, by making the project more safe and maybe more productive,
+also getting the errors checking. Even if is mixed and could look weird it's a additional help and may be worth the try.
+
+=======================================================================================================================
+
+COMPARING OTHER OPTIONS
+
+TypeScript vs Babel
+If you prefer ES6 with Babel then TypeScript might not interest you at all.
+ES6 come long way and now javascript it self gonna support classes and all.
+So all typescript is gonna do is introduce type safe syntax. So its a enhancement tool.
+
+TypeScript vs Flow
+If you are working with Angular2, you might favor TypeScript because it's the dominant language.
+If you are using React, you might prefer Flow because it easily integrates with Babel and other infrastructure.
+
+TypeScript vs CoffeeScript
+Is CoffeeScript worth learning? No.
+Would be better off writing in JavaScript(or TypeScript) rather than CoffeeScript.
+CoffeeScript’s primary features have been replaced with ES6 functionality.
+
+=======================================================================================================================
+
+INSIGHTS
+
+# Typescript is a compile time system, not a runtime system.
+# You write in TypeScript but don't run TS, it's all JS.
+# It's not just type checking.
+# Angular team even supports TypeScript.
+# Babel is a compiler, TS is a language with a compiler.
+
+=======================================================================================================================
