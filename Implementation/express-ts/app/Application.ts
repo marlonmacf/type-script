@@ -1,7 +1,7 @@
 // Import everything from express and assign it to the express variable.
 import * as express from 'express';
 
-// Import WelcomeController from controllers entry point.
+// Import MainController from controllers entry point.
 import {MainController} from './controllers/MainController';
 
 // Create a new express application instance.
@@ -10,7 +10,7 @@ const app: express.Application = express();
 // The port the express app will listen on.
 const port: number = process.env.PORT || 3000;
 
-// Mount the WelcomeController at the /welcome route.
+// Mount the MainController at the "/" route.
 app.use('/', MainController);
 
 // Serve the application at the given port.
