@@ -51,32 +51,30 @@ Finally let's create the application files:
 .
 ├── app
 │   ├── controllers
-│   │   ├── index.ts
-│   │   └── welcomeController.ts
-│   └── server.ts
+│   │   └── MainController.ts
+│   └── Application.ts
 ├── build
 ├── node_modules
 ├── package.json
 ├── tsconfig.json
 
-Create a express app, by writing the welcomeController.ts, index.ts and server.ts files.
+Create a express app, by writing the MainController.ts and Application.ts files.
 Now that we have finished writing the application, let's transpile it to javascript:
 
 tsc
 
-Alternatively you may run the following to tell the Typescript compiler to run every time it
-detects a filesystem changes:
+Alternatively you may run the following to tell the Typescript compiler to run every time it detects changes:
 
 tsc --watch
 
 We can now run the app with the following command:
 
-node build/server.js
+node build/Application.js
 
 Or using the nodemon starter, by configuring our package.json:
 
 "scripts": {
-  "start": "node ./build/server.js"
+  "start": "node ./build/Application.js"
 }
 
 We can now run the app with the following command:
@@ -90,7 +88,7 @@ BOOTSTRAPING THE APPLICATION
 Install the application dependencies and typescript syntax:
 npm install
 
-Transpiling and watch the typescript files:
+Build and watch the typescript files:
 tsc --watch
 
 Run the express typescript app:

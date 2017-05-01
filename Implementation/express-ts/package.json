@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./build/server.js"
+    "start": "node ./build/Application.js"
   },
   "dependencies": {
     "@types/es6-shim": "^0.31.33",

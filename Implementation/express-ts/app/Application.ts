@@ -2,7 +2,7 @@
 import * as express from 'express';
 
 // Import WelcomeController from controllers entry point.
-import {WelcomeController} from './controllers';
+import {MainController} from './controllers/MainController';
 
 // Create a new express application instance.
 const app: express.Application = express();
@@ -11,11 +11,11 @@ const app: express.Application = express();
 const port: number = process.env.PORT || 3000;
 
 // Mount the WelcomeController at the /welcome route.
-app.use('/', WelcomeController);
+app.use('/', MainController);
 
 // Serve the application at the given port.
 app.listen(port, () => {
 
     // Success callback.
-    console.log(`Listening at http://localhost:${port}/`);
+    console.log(`[success] Listening at http://localhost:${port}`);
 });

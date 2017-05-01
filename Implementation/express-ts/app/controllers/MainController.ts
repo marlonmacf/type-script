@@ -17,5 +17,5 @@ router.get('/:name', (request: Request, response: Response) => {
     response.send(`Hello, ${name}!`);
 });
 
-// Export the express.Router() instance to be used by server.ts.
-export const WelcomeController: Router = router;
+// Export the express.Router() instance to be used by app.ts.
+export const MainController: Router = router;
