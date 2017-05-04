@@ -1,7 +1,10 @@
 ENVIRONMENT
 
-To get our TypeScript environment configured for our application, install the typescript compiler:
-sudo npm install typescript --save
+To get our TypeScript environment configured for our application, install the typescript compiler as global:
+sudo npm install -g typescript
+
+To automatically rebuild our application when it changes, install nodemon as global:
+sudo npm install -g nodemon
 
 Makes a new directory:
 mkdir express-ts
@@ -27,6 +30,7 @@ parameter in the tsconfig.json:
 
 Now we can install the application dependencies via NPM:
 npm init -y
+npm install --save typescript
 npm install --save express
 
 As we will be using Express and ES2015 syntax we need to install the "es6-shim", "node", and "express" types:
@@ -43,6 +47,7 @@ package.json
     "@types/es6-shim": "^0.31.33",
     "@types/express": "^4.0.35",
     "@types/node": "^7.0.14",
+    "typescript": "^2.3.2",
     "express": "^4.15.2"
   }
 }
@@ -58,8 +63,8 @@ Finally let's create the application files:
 ├── package.json
 ├── tsconfig.json
 
-Create a express app, by writing the MainController.ts and Application.ts files.
-Now that we have finished writing the application, let's transpile it to javascript:
+Create your express node app, by writing the MainController.ts and Application.ts files.
+Now that we have finished writing the application, let's compile it to javascript:
 
 tsc
 
@@ -71,7 +76,7 @@ We can now run the app with the following command:
 
 node build/Application.js
 
-Or using the nodemon starter, by configuring our package.json:
+Or using the nodemon starter, by configuring our package.json with a start file:
 
 "scripts": {
   "start": "node ./build/Application.js"

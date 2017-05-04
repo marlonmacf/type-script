@@ -1,7 +1,6 @@
 {
   "name": "express-ts",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
   "scripts": {
     "start": "node ./build/Application.js"
   },
@@ -9,6 +8,7 @@
     "@types/es6-shim": "^0.31.33",
     "@types/express": "^4.0.35",
     "@types/node": "^7.0.14",
+    "typescript": "^2.3.2",
     "express": "^4.15.2"
   }
 }
